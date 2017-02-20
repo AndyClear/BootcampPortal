@@ -1,5 +1,5 @@
-resource "aws_elb" "web_elb" {
-  name = "${var.user}-${var.environment}-web-elb"
+resource "aws_elb" "ci_elb" {
+  name = "${var.user}-${var.environment}-ci-elb"
 
   listener {
     instance_port = 80

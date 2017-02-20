@@ -1,5 +1,5 @@
-resource "elb_security_group" "elb_sg" {
-  name = "${var.user}-${var.environment}-elb-sg"
+resource "aws_security_group" "elb_sg" {
+  name = "${var.user}-${var.environment}--ci-elb-sg"
   description = "Security associated to the Drone load balancer."
 
   ingress {

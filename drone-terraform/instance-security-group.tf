@@ -1,8 +1,8 @@
-resource "aws_security_group" "web_sg" {
-  name = "${var.user}-${var.environment}-web-sg"
+resource "aws_security_group" "ci_sg" {
+  name = "${var.user}-${var.environment}-ci-sg"
   description = "Only allow traffic via the Drone load balancer."
 
-  vpc_id = "${var.vpc_id}"
+  //vpc_id = "${var.vpc_id}"
 
   ingress {
     from_port = 80
