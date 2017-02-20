@@ -1,6 +1,13 @@
 pipeline:
-  hello:
+  buildGO:
     image: golang
     commands:
       - cd /drone/src/github.com/AndyClear/BootcampPortal/test
       - go build
+  buildImage:
+    image: plugins/docker
+    username: andyclear
+    password: ${dockerPassword}
+    repo: andyclear/bootcamp
+    tags: latest
+    dockerfile: test/Dockerfile
