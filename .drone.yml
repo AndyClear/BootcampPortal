@@ -2,6 +2,7 @@ pipeline:
   build:
     image: golang
     commands:
+      - cd /test
       - go get
       - go build
       - go test
