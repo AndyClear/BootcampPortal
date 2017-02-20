@@ -3,6 +3,4 @@ pipeline:
     image: golang
     commands:
       - cd /drone/src/github.com/AndyClear/BootcampPortal/test
-      - go get
       - go build
-      - go test
