@@ -1,5 +1,5 @@
 pipeline:
-  build:
+  hello:
     image: golang
     commands:
       - cd /drone/src/github.com/AndyClear/BootcampPortal/test
