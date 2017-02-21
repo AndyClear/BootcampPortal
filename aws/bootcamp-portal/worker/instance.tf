@@ -10,16 +10,16 @@ data "aws_ami" "ubuntu" {
   }
   owners = ["099720109477"] # Canonical
 }
-resource "aws_instance" "controller" {
+resource "aws_instance" "worker" {
     ami = "${data.aws_ami.ubuntu.id}"
     instance_type = "${var.instancetype}"
-    vpc_security_group_ids = ["${aws_security_group.controller.id}"]
+    vpc_security_group_ids = ["${aws_security_group.worker.id}"]
     associate_public_ip_address = true
     subnet_id = "${element(var.subnets, count.index)}" 
     count = "${var.servers}" 
     key_name = "${var.ssh_key_name}"
     tags {
-         Name = "${var.environment}-controller-${count.index}"
+         Name = "${var.environment}-worker-${count.index}"
     }
 }
 
