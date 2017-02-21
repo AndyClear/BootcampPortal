@@ -4,7 +4,7 @@ variable "environment" {
 
 variable "instancetype" {
   description = "Type of infrastructure we want to spin up" 
-  default = "t2.micro"
+  default = "t2.medium"
 }
 
 variable "ssh_key_name" {
