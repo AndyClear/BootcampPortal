@@ -16,4 +16,9 @@ variable "subnets" {
   description = "The subnet in which a controller is assigned"
 }
 
+variable "vpcid"
+{
+	description = "Holds our VPC ID"
+}
+
 variable "servers" {}

@@ -1,6 +1,7 @@
-resource "aws_security_group" "allow_all" {
-  name = "allow_all"
+resource "aws_security_group" "controller" {
+  name = "${var.environment}-controller"
   description = "Security Group for Controller"
+  vpc_id = "${var.vpcid}"
 
   ingress {
       from_port = 0

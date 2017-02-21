@@ -13,7 +13,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "controller" {
     ami = "${data.aws_ami.ubuntu.id}"
     instance_type = "${var.instancetype}"
-    vpc_security_group_ids = [""]
+    vpc_security_group_ids = ["${aws_security_group.controller.id}"]
     associate_public_ip_address = true
     subnet_id = "${element(var.subnets, count.index)}" 
     count = "${var.servers}" 
