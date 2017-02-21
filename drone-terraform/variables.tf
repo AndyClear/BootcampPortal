@@ -1,71 +1,46 @@
 variable "access_key" {
-  description = "The AWS access key."
+    description = "The AWS access key."
 }
 
 variable "secret_key" {
-  description = ""
-}
-
-variable user {
-  description = ""
-}
-
-variable environment {
-  description = ""
+    description = "The AWS secret key."
 }
 
 variable "region" {
-  description = "The region of AWS where the instance should be created."
-  default = "eu-west-1"
+    description = "The AWS region to create resources in."
+    default = "eu-west-1"
 }
 
-#####################
-
-//variable "vpc_id"{
-//  description = ""
-//}
-
-//variable "web_instance_ami" {
-//  description = "The AMI for the web server."
-//}
-
-variable "ci_instance_type" {
-  description = "The type of instance for the web server."
-  default = "t2.micro"
+variable "ecs_cluster_name" {
+    description = "The name of the Amazon ECS cluster."
+    default = "ci-cluster"
 }
 
-//variable subnets {
-//  description = "The subnets that the load balancer will cover"
-//}
-//
-//variable key_name {
-//  description = "Name of an AWS keypair to use on instances"
-//}
-//
-//variable DroneRemoteConfig {
-// description = "The remote config value for Drone",
-//}
-
-//variable DroneRemoteDriver {
-//  description ="The remote driver value for Drone"
-//}
-
-variable DroneMemoryAllocation {
-  description = "The amount of memory to allocate to the Drone container"
-  default = 1024
+variable "ami" {
+    description = "Which AWS ECS optimized image to use."
+    default = "ami-a7f2acc1"
 }
 
-variable DroneCpuUnits {
-  description = "How many CPU units to allocate to the Drone container"
-  default = 512
+variable "autoscale_min" {
+    default = "1"
+    description = "Minimum number of EC2 instances."
 }
 
-//variable DroneInstanceType {
-//  description = "The EC2 instance type to build"
-//  default = "m4.large"
-//}
+variable "autoscale_max" {
+    default = "1"
+    description = "Maximum number of EC2 instances."
+}
 
-variable IncomingHttpCidr {
-  description = "A CIDR range to restrict incoming HTTP to the load balancer"
-  default = "0.0.0.0/0"
+variable "autoscale_desired" {
+    default = "1"
+    description = "Desired number of EC2 instances."
+}
+
+variable "instance_type" {
+    default = "t2.medium"
+}
+
+variable "ssh_pubkey_file" {
+    description = "Path to an SSH public key"
+    default = "~/.ssh/id_rsa.pub"
 }
