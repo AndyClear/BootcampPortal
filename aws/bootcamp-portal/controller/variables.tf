@@ -15,3 +15,5 @@ variable "subnets" {
   type = "list" 
   description = "The subnet in which a controller is assigned"
 }
+
+variable "servers" {}

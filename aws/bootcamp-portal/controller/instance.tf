@@ -16,7 +16,7 @@ resource "aws_instance" "controller" {
     vpc_security_group_ids = [""]
     associate_public_ip_address = true
     subnet_id = "${element(var.subnets, count.index)}" 
-    count = "${length(var.subnets)}" 
+    count = "${var.servers}" 
     key_name = "${var.ssh_key_name}"
     tags {
          Name = "${var.environment}-controlleri-${count.index}"
