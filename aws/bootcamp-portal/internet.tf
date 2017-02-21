@@ -11,7 +11,8 @@ resource "aws_route_table" "route_table" {
 }
 
 resource "aws_route_table_association" "a" {
-    subnet_id = "${aws_subnet.main.0.id}"
+	count = "${var.servers}"
+    subnet_id = "${element(aws_subnet.main.*.id, count.index)}"
     route_table_id = "${aws_route_table.route_table.id}"
 }
 
