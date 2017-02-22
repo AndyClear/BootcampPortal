@@ -6,8 +6,8 @@ pipeline:
       - go build
   buildImage:
     image: plugins/docker
-    username: AWS
+    username: devopsbootcamp
     password: ${DOCKER_PASSWORD}
-    repo: 481807661051.dkr.ecr.eu-west-1.amazonaws.com/devops-bootcamp
+    repo: capgeminidevopsbootcamp/bootcamp-app
     tags: latest
     dockerfile: test/Dockerfile
