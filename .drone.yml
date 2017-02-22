@@ -7,7 +7,7 @@ pipeline:
   buildImage:
     image: plugins/docker
     username: devopsbootcamp
-    password: ${DOCKER_PASSWORD}
+    password: ${DHUB_PASSWORD}
     repo: capgeminidevopsbootcamp/bootcamp-app
     tags: latest
     dockerfile: test/Dockerfile
