@@ -1,6 +1,3 @@
-/**
- * Created by AHINDE on 21/02/2017.
- */
 import React from 'react'
 
 class Dashboard extends React.Component {
