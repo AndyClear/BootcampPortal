@@ -40,6 +40,9 @@ class App extends Component {
             <AppBar title="Menu" showMenuIconButton={false} onClick={this.handleToggle} />
             <MenuItem containerElement={<Link to="/dashboard"/>}>Dashboard</MenuItem>
             <MenuItem containerElement={<Link to="/login"/>}>Login</MenuItem>
+            <MenuItem containerElement={<Link to="/feedback"/>}>Feedback</MenuItem>
+            <MenuItem containerElement={<Link to="/locations"/>}>Locations</MenuItem>
+            <MenuItem containerElement={<Link to="/attendees"/>}>Attendees</MenuItem>
           </Drawer>
           {this.props.children}
           </div>
