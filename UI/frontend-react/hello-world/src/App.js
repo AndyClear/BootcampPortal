@@ -9,35 +9,19 @@ import Toggle from 'material-ui/Toggle';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
-import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 const nearbyIcon = <IconLocationOn />;
-const recentsIcon = <FontIcon className="material-icons">restore</FontIcon>;
-const favoritesIcon = <FontIcon className="material-icons">favorite</FontIcon>;
 import {Link} from 'react-router';
 import './App.css';
 
 class App extends Component {
-
-state = {
-    selectedIndex: 0,
-  };
-
-style = {
-  height: 100,
-  width: 100,
-  margin: 20,
-  textAlign: 'center',
-  display: 'inline-block',
-};
 
    constructor(props) {
     super(props);
     this.state = {open: false};
   }
 
-  select = (index) => this.setState({selectedIndex: index});
 
   handleToggle = () => this.setState({open: !this.state.open});
 
