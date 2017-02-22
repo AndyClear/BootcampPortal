@@ -8,6 +8,6 @@ pipeline:
     image: plugins/docker
     username: AWS
     password: ${DOCKER_PASSWORD}
-    repo: andyclear/bootcamp
+    repo: 481807661051.dkr.ecr.eu-west-1.amazonaws.com/devops-bootcamp
     tags: latest
     dockerfile: test/Dockerfile
