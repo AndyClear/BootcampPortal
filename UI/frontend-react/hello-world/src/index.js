@@ -4,7 +4,7 @@ import App from './App';
 import Login from './login';
 import Dashboard from './dashboard';
 import { Router, Route, browserHistory} from 'react-router'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './index.css';
 
 
