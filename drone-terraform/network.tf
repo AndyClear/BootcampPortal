@@ -1,5 +1,5 @@
 resource "aws_vpc" "ecs_vpc" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = "10.1.0.0/16"
   enable_dns_hostnames = true
 }
 
@@ -20,7 +20,7 @@ resource "aws_route_table_association" "external_rta" {
 # for each availability zone
 resource "aws_subnet" "ecs_subnet" {
   vpc_id = "${aws_vpc.ecs_vpc.id}"
-  cidr_block = "10.0.1.0/24"
+  cidr_block = "10.1.1.0/24"
   //availability_zone = "${var.availability_zone}"
   availability_zone = "${data.aws_availability_zones.available.names[0]}"
 }
