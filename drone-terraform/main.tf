@@ -17,6 +17,11 @@ resource "aws_autoscaling_group" "ecs-cluster" {
     health_check_type = "EC2"
     launch_configuration = "${aws_launch_configuration.ecs_lc.name}"
     vpc_zone_identifier = ["${aws_subnet.ecs_subnet.id}"]
+    tag {
+        key                 = "Name"
+        value               = "ECS Cluster Instance"
+        propagate_at_launch = true
+    }
 }
 
 resource "aws_launch_configuration" "ecs_lc" {

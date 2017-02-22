@@ -23,11 +23,11 @@
             },
             {
                 "name": "DRONE_GITHUB_CLIENT",
-                "value": "blank"
+                "value": "510f573a2409e6deaf99"
             },
             {
                 "name": "DRONE_GITHUB_SECRET",
-                "value": "blank"
+                "value": "${github_secret}"
             },
             {
                 "name": "DRONE_SECRET",
@@ -47,7 +47,7 @@
         "image": "drone/drone:0.5",
         "cpu": 50,
         "memory": 512,
-        "links": [],
+        "links": ["drone-server"],
         "portMappings": [
         ],
         "environment": [

@@ -6,8 +6,8 @@ pipeline:
       - go build
   buildImage:
     image: plugins/docker
-    username: andyclear
-    password: ${dockerPassword}
+    username: AWS
+    password: ${DOCKER_PASSWORD}
     repo: andyclear/bootcamp
     tags: latest
     dockerfile: test/Dockerfile

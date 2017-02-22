@@ -22,6 +22,14 @@ resource "aws_elb" "drone-ci" {
     cross_zone_load_balancing = true
 }
 
+data "template_file" "drone_container_defs" {
+    template = "${file("task-definitions/drone-ci.json.tpl")}"
+
+    vars {
+        github_secret = "${var.github_secret}"
+    }
+}
+
 resource "aws_ecs_task_definition" "drone-ci" {
     family = "drone-ci"
 
@@ -36,7 +44,7 @@ resource "aws_ecs_task_definition" "drone-ci" {
     }
 
 
-    container_definitions = "${file("task-definitions/drone-ci.json")}"
+    container_definitions = "${data.template_file.drone_container_defs.rendered}"
 }
 
 resource "aws_ecs_service" "drone-ci" {

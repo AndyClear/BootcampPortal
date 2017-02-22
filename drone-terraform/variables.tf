@@ -44,3 +44,7 @@ variable "ssh_pubkey_file" {
     description = "Path to an SSH public key"
     default = "~/.ssh/id_rsa.pub"
 }
+
+variable "github_secret" {
+    description = "The github secret."
+}
