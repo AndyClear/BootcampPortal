@@ -2,7 +2,7 @@ pipeline:
   buildGO:
     image: golang
     commands:
-      - cd /drone/src/github.com/AndyClear/BootcampPortal/test
+      - cd /drone/src/github.com/capgemini-devops-bootcamp/BootcampPortal/test
       - go build
   buildImage:
     image: plugins/docker
