@@ -1,7 +1,6 @@
-FROM alpine
+FROM golang
 
-COPY test /test
-RUN chmod +x /test
+COPY . /go/
+RUN go build -o /test
 CMD /test
 
-EXPOSE 8484
