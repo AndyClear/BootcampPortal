@@ -1,0 +1,30 @@
+.Dashboard {
+  text-align: center;
+}
+
+.Dashboard-logo {
+  /*animation: Dashboard-logo-spin infinite 20s linear;*/
+  height: 80px;
+}
+
+.Dashboard-header {
+  text-align: center;
+  background-color: SkyBlue;
+  height: 60px;
+  padding: 20px;
+  color: White;
+}
+
+.Dashboard-intro {
+  font-size: large;
+}
+
+.Dashboard-body {
+  text-align: center;
+  list-style-position: center;
+}
+
+@keyframes dashboard-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -8,118 +8,103 @@ import ActionGrade from 'material-ui/svg-icons/action/grade';
 import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
 import {  pinkA200, transparent} from 'material-ui/styles/colors';
-import {
-    blue300,
-    indigo900,
-    orange200,
-    deepOrange300,
-    pink400,
-    purple500,
-} from 'material-ui/styles/colors';
 import './App.css';
-
-const style = {
-    margin: 5
-};
 
 class Attendee extends React.Component {
         render() {
-            return ( <div class = "attendee" >
+            return ( <div class="attendee" >
                 <h1 > Attendee < /h1>
 
               <List >
-                <ListItem primaryText = "Chelsea Otakan"
-                leftIcon = { < ActionGrade color = {
+                <ListItem primaryText="Chelsea Otakan"
+                leftIcon={< ActionGrade color={
                         pinkA200
                     }
                     />}
-                    rightAvatar = { < Avatar src = "http://www.material-ui.com/images/chexee-128.jpg" / >
+                    rightAvatar={< Avatar src="http://www.material-ui.com/images/chexee-128.jpg" / >
                     }
                     />
                     <ListItem
-                    primaryText = "Eric Hoffman"
-                    insetChildren = {
+                    primaryText="Eric Hoffman"
+                    insetChildren={
                         true
                     }
-                    rightAvatar = { < Avatar src = "http://www.material-ui.com/images/kolage-128.jpg" / >
+                    rightAvatar={ < Avatar src="http://www.material-ui.com/images/kolage-128.jpg" / >
                     }
                     />
                     <ListItem
-                    primaryText = "James Anderson"
-                    insetChildren = {
+                    primaryText="James Anderson"
+                    insetChildren={
                         true
                     }
-                    rightAvatar = { < Avatar src = "http://www.material-ui.com/images/jsa-128.jpg" / >
+                    rightAvatar={ < Avatar src="http://www.material-ui.com/images/jsa-128.jpg" / >
                     }
                     />
                     <ListItem
-                    primaryText = "Kerem Suer"
-                    insetChildren = {
+                    primaryText="Kerem Suer"
+                    insetChildren={
                         true
                     }
-                    rightAvatar = { < Avatar src = "http://www.material-ui.com/images/kerem-128.jpg" / >
+                    rightAvatar={< Avatar src="http://www.material-ui.com/images/kerem-128.jpg" / >
                     }
                     />
                     </List>
-                    <Divider inset = {
+                    <Divider inset={
                         true
                     }
                     />
                     <List >
 
                     <ListItem
-                    primaryText = "Adelle Charles"
-                    leftAvatar = { <
+                    primaryText="Adelle Charles"
+                    leftAvatar={ <
                         Avatar
-                        color = {
+                        color={
                             pinkA200
                         }
-                        backgroundColor = {
+                        backgroundColor={
                             transparent
                         }
-                        style = {
+                        style={
                             {
                                 left: 8
                             }
-                        } >
-                        A <
+                        }>
+                        A<
                         /Avatar>
                     }
-                    rightAvatar = { < Avatar src = "http://www.material-ui.com/images/adellecharles-128.jpg" / >
+                    rightAvatar={< Avatar src="http://www.material-ui.com/images/adellecharles-128.jpg" / >
                     }
                     />
                     <ListItem
-                    primaryText = "Adham Dannaway"
-                    insetChildren = {
+                    primaryText="Adham Dannaway"
+                    insetChildren={
                         true
                     }
-                    rightAvatar = { < Avatar src = "http://www.material-ui.com/images/adhamdannaway-128.jpg" / >
+                    rightAvatar={<Avatar src="http://www.material-ui.com/images/adhamdannaway-128.jpg" / >
                     }
                     />
                     <ListItem
-                    primaryText = "Allison Grayce"
-                    insetChildren = {
+                    primaryText="Allison Grayce"
+                    insetChildren={
                         true
                     }
-                    rightAvatar = { < Avatar src = "http://www.material-ui.com/images/allisongrayce-128.jpg" / >
+                    rightAvatar={< Avatar src="http://www.material-ui.com/images/allisongrayce-128.jpg" / >
                     }
                     />
                     <ListItem
-                    primaryText = "Angel Ceballos"
-                    insetChildren = {
+                    primaryText="Angel Ceballos"
+                    insetChildren={
                         true
                     }
-                    rightAvatar = { < Avatar src = "http://www.material-ui.com/images/angelceballos-128.jpg" / >
+                    rightAvatar={<Avatar src="http://www.material-ui.com/images/angelceballos-128.jpg" / >
                     }
                     />
                     </List>
 
                     </div>
-
                 )
-
             }
-
         }
 
 export default Attendee;
