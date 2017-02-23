@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import IconMenu from 'material-ui/IconMenu';
+//import IconButton from 'material-ui/IconButton';
+//import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
-import FlatButton from 'material-ui/FlatButton';
-import FontIcon from 'material-ui/FontIcon';
-import Toggle from 'material-ui/Toggle';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
+//import FlatButton from 'material-ui/FlatButton';
+//import FontIcon from 'material-ui/FontIcon';
+//import Toggle from 'material-ui/Toggle';
+//import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import Drawer from 'material-ui/Drawer';
-import RaisedButton from 'material-ui/RaisedButton';
-import Paper from 'material-ui/Paper';
-import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
+//import RaisedButton from 'material-ui/RaisedButton';
+//import Paper from 'material-ui/Paper';
+//import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 import ImageEdit from 'material-ui/svg-icons/image/edit';
 import ActionFace from 'material-ui/svg-icons/action/face'
-import ActionFavorite from 'material-ui/svg-icons/action/favorite'
+//import ActionFavorite from 'material-ui/svg-icons/action/favorite'
 import MapsPlace from 'material-ui/svg-icons/maps/place';
 import ActionHome from 'material-ui/svg-icons/action/home';
 import ContentWeekend from 'material-ui/svg-icons/content/weekend';
@@ -39,22 +39,23 @@ class App extends Component {
           <Drawer
             docked={false}
             width={200}
-            open={this.state.open} 
+            open={this.state.open}
             onRequestChange={(open) => this.setState({open})} >
             <AppBar title="Menu" showMenuIconButton={false} onClick={this.handleToggle} />
             <MenuItem containerElement={<Link to="/dashboard"/>} leftIcon={<ActionHome />}>Dashboard</MenuItem>
             <MenuItem containerElement={<Link to="/login"/>} leftIcon={<ActionFace />} > Login</MenuItem>
             <MenuItem containerElement={<Link to="/feedback"/>} leftIcon={<ImageEdit />} > Feedback</MenuItem>
             <MenuItem containerElement={<Link to="/locations"/>} leftIcon={<MapsPlace /> }>Locations</MenuItem>
-            <MenuItem containerElement={<Link to="/attendees"/>} leftIcon={<ContentWeekend /> }> Attendees</MenuItem>
+            <MenuItem containerElement={<Link to="/Attendee"/>} leftIcon={<ContentWeekend /> }> Attendees</MenuItem>
             <MenuItem className="Bottom">Capgemini</MenuItem>
           </Drawer>
+
           {this.props.children}
           </div>
       </div>
       </div>
       </div>
-   
+
     );
   }
 }

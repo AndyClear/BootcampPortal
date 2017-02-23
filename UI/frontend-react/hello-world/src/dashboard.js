@@ -6,7 +6,7 @@ import React from 'react'
   <div>
     <div>
       <h2>Welcome to the Devops Bootcamp Portal!</h2>
-        <p>For all of your DevOps Bootcamp queries. Access all pages from the top-left corner of the page.</p> 
+        <p>For all of your DevOps Bootcamp queries. Access all pages from the top-left corner of the page.</p>
     </div>
     <body>
       <h3>Schedule:</h3>
