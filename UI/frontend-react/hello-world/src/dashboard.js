@@ -4,6 +4,13 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import {List,ListItem} from 'material-ui/List';
 import {Timeline} from 'react-twitter-widgets'
+import {connect} from 'react-redux';
+
+const mapStateToProps = (state) => {
+    return {
+        data: state.users.data
+    }
+}
 
 class Dashboard extends React.Component {
 
@@ -23,8 +30,8 @@ class Dashboard extends React.Component {
 
  render() {
     const ret = [];
-    const timeList = ["09:30", "12:15", "13:15", "17:00"];
-    const itemList = ["Introduction to Microservices. Location: Code Node", "Lunch", "Practical session: using docker", "Day 1 finish"]
+    const schedule = this.props.data
+    //const schedule = [{time: "09:30", item: "test"}]
 
       const actions = [
       <FlatButton
@@ -32,9 +39,12 @@ class Dashboard extends React.Component {
         primary={true}
         onClick={this.handleClose}
       />
-    ];   
-    for (let i = 0; i < timeList.length; i++) {
-        ret[i] = <ListItem><a onClick={this.handleOpen} >{" " + timeList[i] + " - " + itemList[i]}</a></ListItem> //add api item 
+    ];  
+
+    for (let i = 0; i < schedule.length; i++) {
+      const sched = schedule[i]
+      ret.push(<ListItem><a onClick={this.handleOpen} >{" " + sched.time + " - " + sched.item}</a></ListItem>);
+         
     }
 
 
@@ -78,4 +88,8 @@ class Dashboard extends React.Component {
 }
 }
 
-export default Dashboard;
+const DashboardExtended = connect(
+    mapStateToProps
+  )(Dashboard)
+
+export default DashboardExtended;
