@@ -16,4 +16,5 @@ pipeline:
     template: kubernetes/deploy.yaml
     server: https://10.0.0.71:6443
     token: ${KUBE_TOKEN}
+    ca: ${KUBE_CA}
 
