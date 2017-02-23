@@ -12,13 +12,13 @@ class Login extends React.Component {
 
     render() {
         return (
-        <div class="LoginContainer">
+        <div className="LoginContainer">
         <h1>Login</h1>
             <TextField hintText="Username"  />
             <br/>
             <TextField hintText="Password" type="password" />
             <br />
-            <RaisedButton label="Login" Default style={style} />
+            <RaisedButton label="Login" default style={style} />
         </div>
     )
 
