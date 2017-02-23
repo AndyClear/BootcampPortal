@@ -26,6 +26,12 @@
   text-align: center;
 }
 
+.attendee{
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer';
+<<<<<<< HEAD
 import FontIcon from 'material-ui/FontIcon';
 import Toggle from 'material-ui/Toggle';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import RaisedButton from 'material-ui/RaisedButton';
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
+=======
+>>>>>>> f781f11... adding copyright
 import ImageEdit from 'material-ui/svg-icons/image/edit';
 import ActionFace from 'material-ui/svg-icons/action/face'
 import MapsPlace from 'material-ui/svg-icons/maps/place';
@@ -44,6 +47,7 @@ class App extends Component {
             <MenuItem containerElement={<Link to="/Attendee"/>} leftIcon={<ContentWeekend /> }> Attendees</MenuItem>
             <h5 className="Bottom"> &copy; Devops Bootcamp 2017</h5>
           </Drawer>
+
           {this.props.children}
           </div>
       </div>
