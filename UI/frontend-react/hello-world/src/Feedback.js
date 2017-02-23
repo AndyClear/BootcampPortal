@@ -33,11 +33,11 @@ class Feedback extends React.Component {
   getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return 'Question 1';
+        return 'How did you find the instructors?';
       case 1:
-        return 'Question 2';
+        return 'How did you find the facilities?';
       case 2:
-        return 'Question 3';
+        return 'Anything else you would add?';
       default:
         return 'Feedback';
     }
@@ -46,38 +46,26 @@ class Feedback extends React.Component {
   render() {
     const {finished, stepIndex} = this.state;
     const contentStyle = {margin: '0 16px'};
-    const steps = ["How did you find the instructors?", "How did you find the facilities?", "Anything else you would add?"]
-
 
 
     return (
-      <div style={{width: '100%', maxWidth: 700, margin: 'auto'}}>
+      <div style={{width: '100%', maxWidth: 500, margin: 'auto'}}>
         <Stepper activeStep={stepIndex}>
           <Step>
-            <StepLabel>How did you find the instructors?</StepLabel>
-            <TextField hintText="Answer here" />
+            <StepLabel>Question One</StepLabel>
           </Step>
           <Step>
-            <StepLabel>How did you find the facilities?</StepLabel>
-            <TextField hintText="Answer here" />
+            <StepLabel>Question Two</StepLabel>
           </Step>
           <Step>
-            <StepLabel>Anything else you would add?</StepLabel>
-            <TextField hintText="Answer here" />
+            <StepLabel>Question Three</StepLabel>
           </Step>
         </Stepper>
+
         <div style={contentStyle}>
           {finished ? (
             <p>
-              <a
-                href="#"
-                onClick={(event) => {
-                  event.preventDefault();
-                  this.setState({stepIndex: 0, finished: false});
-                }}
-              >
-                Click here
-              </a> to reset the example.
+              Thank you! Your feedback has been recorded.
             </p>
           ) : (
             <div>
@@ -86,14 +74,19 @@ class Feedback extends React.Component {
                 <FlatButton
                   label="Back"
                   disabled={stepIndex === 0}
-                  onTouchTap={this.handlePrev}
+                  onClick={this.handlePrev}
                   style={{marginRight: 12}}
                 />
                 <RaisedButton
                   label={stepIndex === 2 ? 'Finish' : 'Next'}
                   primary={true}
-                  onTouchTap={this.handleNext}
+                  onClick={this.handleNext}
                 />
+                <div>
+                   <TextField hintText="Question One" />
+                  <TextField hintText="Question Two" />
+                  <TextField hintText="Question Three" />
+                </div>
               </div>
             </div>
           )}
