@@ -1,11 +1,12 @@
 /**
  * Created by AHINDE on 23/02/2017.
  */
-const LOAD_LOCATIONS = 'LOAD_LOCATIONS';
+export const LOAD_LOCATIONS = 'LOAD_LOCATIONS';
 
-export function loadEvents() {
+export function loadLocations(data) {
     const action = {
-        type: LOAD_LOCATIONS
+        type: LOAD_LOCATIONS,
+        data: data
     }
     return action;
 }
