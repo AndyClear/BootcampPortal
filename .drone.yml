@@ -6,9 +6,9 @@ pipeline:
       - go build
   buildImage:
     image: plugins/docker
-    username: andyclear
-    password: ${dockerPassword}
-    repo: andyclear/bootcamp
+    username: devopsbootcamp
+    password: ${DHUB_PASSWORD}
+    repo: capgeminidevopsbootcamp/bootcamp-app
     tags: latest
     dockerfile: test/Dockerfile 
   deploy:
