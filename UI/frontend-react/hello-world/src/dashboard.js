@@ -3,6 +3,7 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import {List,ListItem} from 'material-ui/List';
+import {Timeline} from 'react-twitter-widgets'
 
 class Dashboard extends React.Component {
 
@@ -41,7 +42,7 @@ class Dashboard extends React.Component {
   <div>
     <div>
       <h2>Welcome to the Devops Bootcamp Portal!</h2>
-        <p>For all of your DevOps Bootcamp queries. Access all pages from the top-left corner of the page.</p>
+        <p>For all of your DevOps Bootcamp queries. Tweet using #devopsBootcamp and leave us a nice comment :).</p>
     </div>
       <h3>Schedule:</h3>
       <div>
@@ -60,6 +61,18 @@ class Dashboard extends React.Component {
           The actions in this window were passed in as an array of React objects.
         </Dialog>
       </div>
+      <Timeline
+    dataSource={{
+      sourceType: 'widget',
+      widgetId: '834005652318072833' 
+
+    }}
+    options={{
+      height: '400', 
+      width: '800'
+    }}
+    onLoad={() => console.log('Timeline is loaded!')}
+  />
   </div>
   )
 }
