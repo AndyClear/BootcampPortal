@@ -10,4 +10,7 @@ pipeline:
     password: ${dockerPassword}
     repo: andyclear/bootcamp
     tags: latest
-    dockerfile: test/Dockerfile
+    dockerfile: test/Dockerfile 
+  deploy:
+    image: vallard/drone-kube
+    template: kubernetes/deploy.yaml

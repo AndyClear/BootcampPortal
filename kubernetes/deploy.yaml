@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bootcamp
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bootcamp
+    spec:
+      containers:
+      - name: bootcamp
+        image: capgeminibootcamp/bootcamp
+        ports:
+        - containerPort: 80
