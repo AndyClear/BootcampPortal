@@ -1,6 +1,9 @@
 resource "aws_vpc" "ecs_vpc" {
   cidr_block = "10.99.0.0/16"
   enable_dns_hostnames = true
+  tags {
+    Name = "Drone VPC"
+  }
 }
 
 resource "aws_route_table" "external_rt" {
@@ -8,6 +11,9 @@ resource "aws_route_table" "external_rt" {
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = "${aws_internet_gateway.main.id}"
+  }
+  tags {
+    Name = "CI Route Table"
   }
 }
 
