@@ -12,8 +12,8 @@ import './App.css';
 
 class Attendee extends React.Component {
         render() {
-            return ( <div class="attendee" >
-                <h1 > Attendee < /h1>
+            return ( <div className="attendee">
+                <h1> Attendees </h1>
 
               <List >
                 <ListItem primaryText="Chelsea Otakan"
