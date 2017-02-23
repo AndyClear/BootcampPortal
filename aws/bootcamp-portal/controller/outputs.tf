@@ -1,3 +1,3 @@
 output "instanceid" {
-  value = "${aws_instance.controller.id}"
+  value = ["${aws_instance.controller.*.id}"]
 }
