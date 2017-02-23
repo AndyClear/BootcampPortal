@@ -2,8 +2,8 @@
 *.exe
 .DS_Store
 example.tf
-aws/terraform.tfplan
-aws/terraform.tfstate
+**/terraform.tfplan
+**/terraform.tfstate*
 bin/
 modules-dev/
 /pkg/
@@ -13,8 +13,6 @@ website/build
 website/node_modules
 .vagrant/
 *.backup
-./*.tfstate
-.terraform/
 *.log
 *.bak
 *~
