@@ -19,6 +19,7 @@ import ActionHome from 'material-ui/svg-icons/action/home';
 import ContentWeekend from 'material-ui/svg-icons/content/weekend';
 import {Link} from 'react-router';
 import './App.css';
+import {Timeline} from 'react-twitter-widgets'
 
 class App extends Component {
 
@@ -52,6 +53,17 @@ class App extends Component {
 
           {this.props.children}
           </div>
+          <Timeline
+    dataSource={{
+      sourceType: 'hashtag',
+      hashtag: 'dog'
+    }}
+    options={{
+      hashtag: 'dog',
+      height: '400'
+    }}
+    onLoad={() => console.log('Timeline is loaded!')}
+  />
       </div>
       </div>
       </div>
