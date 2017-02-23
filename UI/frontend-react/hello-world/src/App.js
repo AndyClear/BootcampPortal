@@ -47,7 +47,7 @@ class App extends Component {
             <MenuItem containerElement={<Link to="/feedback"/>} leftIcon={<ImageEdit />} > Feedback</MenuItem>
             <MenuItem containerElement={<Link to="/locations"/>} leftIcon={<MapsPlace /> }>Locations</MenuItem>
             <MenuItem containerElement={<Link to="/Attendee"/>} leftIcon={<ContentWeekend /> }> Attendees</MenuItem>
-            <MenuItem className="Bottom">Capgemini</MenuItem>
+            <h5 className="Bottom">&copy; DevOps Bootcamp 2017</h5>
           </Drawer>
 
           {this.props.children}
