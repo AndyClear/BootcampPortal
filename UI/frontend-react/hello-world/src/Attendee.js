@@ -22,7 +22,7 @@ row = () => {
         render() {
             return (
               <div>
-                <h1 >Atendees< /h1>
+                <h1 >Attendees< /h1>
                   <tbody>
                     {this.row()}  
                   </tbody>
