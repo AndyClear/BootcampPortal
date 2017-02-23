@@ -13,5 +13,5 @@ spec:
       - name: bootcamp
         image: capgeminidevopsbootcamp/bootcamp-app
         ports:
-        - containerPort: 80
+        - containerPort: 8484
         imagePullPolicy: Always
