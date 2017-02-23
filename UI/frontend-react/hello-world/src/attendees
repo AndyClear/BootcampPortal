@@ -1,5 +1,0 @@
-import React from 'react'
-
-  class locations extends React.Component {
-  render() {
-  return (
