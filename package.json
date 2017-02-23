@@ -1,0 +1,10 @@
+{
+"name": "bootcamp-backend",
+"description": "bootcamp portal back end services",
+"version": "0.0.1",
+"private": true,
+"dependencies": {
+	"express": "4.x"
+	},
+"main": "./backend.js"
+}
