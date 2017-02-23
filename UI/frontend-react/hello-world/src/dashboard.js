@@ -12,7 +12,7 @@ import React from 'react'
       <h3>Schedule:</h3>
       <ul>
         <li>9:30 - Introduction to Microservices. Location: Code Node</li>
-        <li>12:15 - Lunch (provided)</li>
+        <li>12:15 - Lunch.</li>
         <li>13:15 - Practical session: using docker.</li>
         <li>17:00 - Day 1 finish.</li>
       </ul>
