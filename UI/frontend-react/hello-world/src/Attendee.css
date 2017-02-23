@@ -1,0 +1,20 @@
+.Attendee{
+  text-align: center;
+}
+
+.Attendee-header {
+  text-align: center;
+  background-color: SkyBlue;
+  height: 60px;
+  padding: 20px;
+  color: White;
+}
+
+.Attendee-intro {
+  font-size: large;
+}
+
+.Attendee-body {
+  text-align: center;
+  list-style-position: center;
+}
