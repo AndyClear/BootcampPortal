@@ -8,15 +8,17 @@ resource "aws_ecs_cluster" "ecs_cluster" {
     name = "${var.ecs_cluster_name}"
 }
 
-resource "aws_autoscaling_group" "ecs-cluster" {
+resource "aws_autoscaling_group" "ecs_cluster" {
     availability_zones = ["${data.aws_availability_zones.available.names[0]}"]
-    name = "ECS ${var.ecs_cluster_name}"
+    name = "ecs-${var.ecs_cluster_name}"
     min_size = "${var.autoscale_min}"
     max_size = "${var.autoscale_max}"
     desired_capacity = "${var.autoscale_desired}"
     health_check_type = "EC2"
     launch_configuration = "${aws_launch_configuration.ecs_lc.name}"
     vpc_zone_identifier = ["${aws_subnet.ecs_subnet.id}"]
+    load_balancers = ["${aws_elb.drone-ci.name}"]
+
     tag {
         key                 = "Name"
         value               = "ECS Cluster Instance"
@@ -34,3 +36,5 @@ resource "aws_launch_configuration" "ecs_lc" {
     associate_public_ip_address = true
     user_data = "#!/bin/bash\necho ECS_CLUSTER='${var.ecs_cluster_name}' > /etc/ecs/ecs.config"
 }
+
+

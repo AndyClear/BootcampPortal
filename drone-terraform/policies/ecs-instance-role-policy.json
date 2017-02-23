@@ -11,7 +11,8 @@
         "ecs:RegisterContainerInstance",
         "ecs:StartTelemetrySession",
         "ecs:Submit*",
-        "ecs:StartTask"
+        "ecs:StartTask",
+        "ecr:*"
       ],
       "Resource": "*"
     }
