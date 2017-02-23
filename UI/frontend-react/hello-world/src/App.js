@@ -14,6 +14,7 @@ class App extends Component {
           <ul>
               <li><Link to="/dashboard">Dashboard</Link></li>
               <li><Link to="/login">Login</Link></li>
+              <li><Link to="/Attendee">Attendee</Link></li>
           </ul>
 
           {this.props.children}

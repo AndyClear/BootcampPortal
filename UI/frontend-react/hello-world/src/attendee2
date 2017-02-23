@@ -1,0 +1,69 @@
+/**
+ * Created by AHINDE on 21/02/2017.
+ */
+//import React from 'react';
+//import MobileTearSheet from '../../../MobileTearSheet';
+//import {ListItem} from 'material-ui/List';
+//import ActionGrade from 'material-ui/svg-icons/action/grade';
+//import Divider from 'material-ui/Divider';
+//import Avatar from 'material-ui/Avatar';
+//import {  pinkA200, transparent} from 'material-ui/styles/colors';
+//from 'material-ui/styles/colors';
+
+//const style = {
+  //  margin: 5
+//};
+
+//class Attendee extends React.Component {
+  //render() {
+  //  const names = ["Angel Ceballos", "Chelsea Otakan", "Eric Hoffman","James Anderson", "Kerem Suer", "Adelle Charles", "Adham Dannaway", "Allison Grayce"]
+//    const avatars = ["http://www.material-ui.com/images/angelceballos-128.jpg", "http://www.material-ui.com/images/chexee-128.jpg" , " http://www.material-ui.com/images/kolage-128.jpg", " http://www.material-ui.com/images/jsa-128.jpg", " http://www.material-ui.com/images/kerem-128.jpg", "http://www.material-ui.com/images/adellecharles-128.jpg", "http://www.material-ui.com/images/adhamdannaway-128.jpg", "http://www.material-ui.com/images/allisongrayce-128.jpg"]
+
+  //  const components = []
+
+  //  for (var componentIndex = 0; componentIndex < names.length; componentIndex++) {
+
+  //    components.push(<ListItem></ListItem>)
+
+  //  }
+     //return <tbody>{names}, {avatars}</tbody>;
+  //   return (<tbody>{components}</tbody>)
+  //}
+//}
+//export default Attendee;
+
+
+import React, {Component, PropTypes} from 'react';
+import Avatar from 'material-ui/Avatar';
+import {List, ListItem, MakeSelectable} from 'material-ui/List';
+
+let SelectableList = MakeSelectable(List);
+
+class Attendee extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {selectedIndex: 1};
+        }
+
+    handleRequestChange (event, index) {
+        this.setState({
+            selectedIndex: index
+        })
+    }
+
+    render() {
+        return (<div>{this.renderAside()}</div>);
+    }
+
+    renderAside() {
+        return (
+            <SelectableList value={this.state.selectedIndex} onChange={this.handleRequestChange.bind(this)}>
+                <ListItem value={1} primaryText="Angel Ceballos" leftAvatar={<Avatar src="http://www.material-ui.com/images/angelceballos-128.jpg" />}/>
+                <ListItem value={2} primaryText="Chelsea Otakan" leftAvatar={<Avatar src="http://www.material-ui.com/images/chexee-128.jpg" />}/>
+                <ListItem value={3} primaryText="Eric Hoffman" leftAvatar={<Avatar src="http://www.material-ui.com/images/kolage-128.jpg" />}/>
+                <ListItem value={4} primaryText="James Anderson" leftAvatar={<Avatar src="http://www.material-ui.com/images/jsa-128.jpg" />}/>
+            </SelectableList>
+        );
+    }
+}
+export default Attendee;
