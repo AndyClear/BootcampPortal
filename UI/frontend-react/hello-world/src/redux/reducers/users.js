@@ -1,10 +1,10 @@
-import UserActions from '../actions/users.js';
+import * as UserActions from '../actions/users.js';
 
-const initialState = {
+export const initialState = {
     data: []
 }
 
-function reducer(state = initialState, action) {
+export function users(state = initialState, action) {
     switch (action.type) {
         case UserActions.LOAD_EVENTS:
             return Object.assign({}, state, {

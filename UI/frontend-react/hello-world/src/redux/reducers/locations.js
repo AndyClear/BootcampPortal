@@ -1,10 +1,10 @@
-import LocationActions from '../actions/locations.js';
+import * as LocationActions from '../actions/locations.js';
 
-const initialState = {
+export const initialState = {
     data: []
 }
 
-function reducer(state = initialState, action) {
+export function locations(state = initialState, action) {
     switch (action.type) {
         case LocationActions.LOAD_LOCATIONS:
             return Object.assign({}, state, {

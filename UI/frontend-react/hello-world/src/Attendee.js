@@ -6,25 +6,33 @@ import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
 import {  pinkA200, transparent} from 'material-ui/styles/colors';
 import './Attendee.css';
+import {connect} from 'react-redux';
 
-const names = ["Chelsea Otakan","Eric Hoffman", "James Anderson"];
-const avatars = ["http://www.material-ui.com/images/chexee-128.jpg", "http://www.material-ui.com/images/kolage-128.jpg", "http://www.material-ui.com/images/jsa-128.jpg"];
+const mapStateToProps = (state) => {
+    return {
+        data: state.users.data
+    }
+}
+
+
+// const names = ["Chelsea Otakan","Eric Hoffman", "James Anderson"];
+// const avatars = ["http://www.material-ui.com/images/chexee-128.jpg", "http://www.material-ui.com/images/kolage-128.jpg", "http://www.material-ui.com/images/jsa-128.jpg"];
 
 class Attendee extends React.Component {
-
-row = () => {
-   var rows = [];
-   for (let i = 0; i<names.length; i++) {
-       rows.push(<ListItem primaryText={names[i]} rightAvatar={<Avatar src={avatars[i]} />}/>);
-   }
-   return rows;
-}
         render() {
+            // const users = [{name: "al", avatar:"http://www.material-ui.com/images/chexee-128.jpg"}];
+            const users = this.props.data
+            var rows = [];
+            for (let i = 0; i<users.length; i++) {
+                const user = users[i]
+                rows.push(<ListItem primaryText={user.name} rightAvatar={<Avatar src={user.avatar} />}/>);
+            }
+
             return (
               <div>
-                <h1 >Atendees< /h1>
+                <h1>Atendees</h1>
                   <tbody>
-                    {this.row()}  
+                    {rows}
                   </tbody>
                </div>
                 )
@@ -32,5 +40,8 @@ row = () => {
         }
 
 
-      
-export default Attendee;
+const AttendeeExtended = connect(
+    mapStateToProps
+)(Attendee)
+
+export default AttendeeExtended;

@@ -1,10 +1,10 @@
-import EventActions from '../actions/events.js';
+import * as EventActions from '../actions/events.js';
 
-const initialState = {
+export const initialState = {
     data: []
 }
 
-function reducer(state = initialState, action) {
+export function events(state = initialState, action) {
     switch (action.type) {
         case EventActions.LOAD_EVENTS:
             return Object.assign({}, state, {
