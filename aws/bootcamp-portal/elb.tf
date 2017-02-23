@@ -21,7 +21,6 @@ resource "aws_security_group" "elb_securitygroup" {
 # Create a new load balancer
 resource "aws_elb" "bootcamp-feedback-balancer" {
   name = "bootcamp-feedback-balancer"
-  availability_zones = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
   security_groups = ["${aws_security_group.elb_securitygroup.id}"]
   subnets = ["${aws_subnet.main.*.id}"]
 
@@ -42,9 +41,9 @@ resource "aws_elb" "bootcamp-feedback-balancer" {
     interval = 30
   }
 
-  instances = ["${module.worker.instanceid}", "${module.controller.instanceid}"]
+  instances = ["${module.worker.instanceid}"]
   cross_zone_load_balancing = true
-  idle_timeout = 400
+  idle_timeout = 400 
   connection_draining = true
   connection_draining_timeout = 400
 
