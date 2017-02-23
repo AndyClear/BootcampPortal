@@ -2,6 +2,7 @@ import React from 'react'
 import Map from 'google-maps-react'
 
   class Locations extends React.Component {
+
   render() {
   return (
   	<div>
