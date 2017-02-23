@@ -30,7 +30,7 @@ class Attendee extends React.Component {
 
             return (
               <div>
-                <h1>Atendees</h1>
+                <h1>Attendees</h1>
                   <tbody>
                     {rows}
                   </tbody>
