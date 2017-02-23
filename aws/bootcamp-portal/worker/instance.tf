@@ -17,6 +17,7 @@ resource "aws_instance" "worker" {
     associate_public_ip_address = true
     subnet_id = "${element(var.subnets, count.index)}" 
     count = "${var.servers}" 
+    private_ip = "10.0.${count.index + 1}.20"
     key_name = "${var.ssh_key_name}"
     tags {
          Name = "${var.environment}-worker-${count.index}"
