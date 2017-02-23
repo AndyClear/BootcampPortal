@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  margin-left: 15%;
 }
 
 .App-header {
@@ -10,11 +10,6 @@
 
 .App-intro {
   font-size: large;
-}
-
-.App-bottom {
-  display: table-cell;
-  vertical-align: bottom;
 }
 
 @keyframes App-logo-spin {

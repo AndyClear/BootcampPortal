@@ -11,7 +11,12 @@ import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
-const nearbyIcon = <IconLocationOn />;
+import ImageEdit from 'material-ui/svg-icons/image/edit';
+import ActionFace from 'material-ui/svg-icons/action/face'
+import ActionFavorite from 'material-ui/svg-icons/action/favorite'
+import MapsPlace from 'material-ui/svg-icons/maps/place';
+import ActionHome from 'material-ui/svg-icons/action/home';
+import ContentWeekend from 'material-ui/svg-icons/content/weekend';
 import {Link} from 'react-router';
 import './App.css';
 
@@ -22,13 +27,12 @@ class App extends Component {
     this.state = {open: false};
   }
 
-
   handleToggle = () => this.setState({open: !this.state.open});
 
   render() {
     return (
       <div>
-       <AppBar title="BootCamp Portal" iconClassNameRight="muidocs-icon-navigation-expand-more" onClick={this.handleToggle}> </AppBar>
+       <AppBar title="BootCamp Portal" iconClassNameRight="muidocs-icon-navigation-expand-more"  onClick={this.handleToggle}></AppBar>
         <div className="App">
           <div className="App-header">
           <div>
@@ -38,11 +42,12 @@ class App extends Component {
             open={this.state.open} 
             onRequestChange={(open) => this.setState({open})} >
             <AppBar title="Menu" showMenuIconButton={false} onClick={this.handleToggle} />
-            <MenuItem containerElement={<Link to="/dashboard"/>}>Dashboard</MenuItem>
-            <MenuItem containerElement={<Link to="/login"/>}>Login</MenuItem>
-            <MenuItem containerElement={<Link to="/feedback"/>}>Feedback</MenuItem>
-            <MenuItem containerElement={<Link to="/locations"/>}>Locations</MenuItem>
-            <MenuItem containerElement={<Link to="/attendees"/>}>Attendees</MenuItem>
+            <MenuItem containerElement={<Link to="/dashboard"/>} leftIcon={<ActionHome />}>Dashboard</MenuItem>
+            <MenuItem containerElement={<Link to="/login"/>} leftIcon={<ActionFace />} > Login</MenuItem>
+            <MenuItem containerElement={<Link to="/feedback"/>} leftIcon={<ImageEdit />} > Feedback</MenuItem>
+            <MenuItem containerElement={<Link to="/locations"/>} leftIcon={<MapsPlace /> }>Locations</MenuItem>
+            <MenuItem containerElement={<Link to="/attendees"/>} leftIcon={<ContentWeekend /> }> Attendees</MenuItem>
+            <MenuItem className="Bottom">Capgemini</MenuItem>
           </Drawer>
           {this.props.children}
           </div>
