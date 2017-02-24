@@ -34,8 +34,7 @@ class Dashboard extends React.Component {
     const ret = [];
     const schedule = this.props.data
     let scheduleItem = [];
-    //const schedule = [{time: "09:30", item: "test"}]
-
+    
     const actions = [
     <FlatButton
     label="OK"
