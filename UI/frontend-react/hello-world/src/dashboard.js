@@ -5,6 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {List,ListItem} from 'material-ui/List';
 import {Timeline} from 'react-twitter-widgets'
 import {connect} from 'react-redux';
+import Divider from 'material-ui/TextField'
 
 const mapStateToProps = (state) => {
   console.log(state)
@@ -52,7 +53,8 @@ class Dashboard extends React.Component {
     <div>
     <div>
       <h2>Welcome to the Devops Bootcamp Portal!</h2>
-        <p>For all of your DevOps Bootcamp queries. Tweet using #devopsBootcamp and leave us a nice comment :).</p>
+      <hr />
+        <p>For all of your DevOps Bootcamp queries. Tweet using #devopsBootcamp and leave us a nice comment!</p>
     </div>
       <h3>Schedule:</h3>
     <div>

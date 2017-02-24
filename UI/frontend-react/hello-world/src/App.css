@@ -1,11 +1,9 @@
 .App {
   margin-left: 15%;
+  margin-right: 15%
 }
 
 .App-header {
-  background-color: white;
-  height: 150px;
-  padding: 20px;
 }
 
 .App-intro {

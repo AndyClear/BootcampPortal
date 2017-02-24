@@ -24,6 +24,10 @@
   list-style-position: center;
 }
 
+hr {
+  margin-right: 15%;
+}
+
 @keyframes dashboard-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

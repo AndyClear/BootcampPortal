@@ -10,7 +10,7 @@ import Attendee from './Attendee';
 import Locations from './locations';
 import Feedback from './Feedback';
 
-import { Router, Route, browserHistory} from 'react-router'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './index.css';
 
@@ -20,7 +20,8 @@ ReactDOM.render((
         <Provider store={store}>
             <Router history={browserHistory}>
                <Route path="/" component={App}>
-               <Route path="dashboard" component={Dashboard}/>
+               <IndexRoute component={Dashboard}/>
+               <Route path="Dashboard" component={Dashboard}/>
                <Route path="Attendee" component={Attendee}/>
                <Route path="Feedback" component={Feedback}/>
                <Route path="locations" component={Locations}/>

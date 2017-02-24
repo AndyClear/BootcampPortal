@@ -49,6 +49,9 @@ class Feedback extends React.Component {
 
 
     return (
+      <div>
+      <h2>Feedback</h2>
+      <hr />
       <div style={{width: '100%', maxWidth: 500, margin: 'auto'}}>
         <Stepper activeStep={stepIndex}>
           <Step>
@@ -91,6 +94,7 @@ class Feedback extends React.Component {
             </div>
           )}
         </div>
+      </div>
       </div>
     );
   }
