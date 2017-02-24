@@ -2,6 +2,11 @@ variable "environment" {
   description = "Staging or Production"
 }
 
+variable "worker_ami" {
+   description = "Worker AMI image"
+   default = "ami-18537f7e"	
+}
+
 variable "instancetype" {
   description = "Type of infrastructure we want to spin up" 
   default = "t2.medium"
