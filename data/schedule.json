@@ -1,7 +1,0 @@
-{
-   "schedule": [
-      { "time":"Mon" , "item":"meetup" },
-      { "time":"Wed" , "item":"implement" },
-	  { "time":"Fri" , "item":"show" }
-   ]
-}

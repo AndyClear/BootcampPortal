@@ -1,0 +1,9 @@
+{
+   "user": [
+      { "eventID":1, "name":"Teo" , "pic":"(-|-)" },
+      { "eventID":1, "name":"Mo" , "pic":"(-|-)" },
+	  { "eventID":1, "name":"Mag" , "pic":"(-|-)" },
+	  { "eventID":1, "name":"Ed" , "pic":"(-|-)" },
+	  { "eventID":1, "name":"UserX" , "pic":"(-|-)" }
+   ]
+}

@@ -1,0 +1,7 @@
+{
+   "schedule": [
+      { "id":1, "time":"Mon" , "item":"meetup" },
+      { "id":2, "time":"Wed" , "item":"implement" },
+	  { "id":3, "time":"Fri" , "item":"show" }
+   ]
+}

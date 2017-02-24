@@ -1,0 +1,3 @@
+/events
+/schedules/:event
+/users/:eventId
