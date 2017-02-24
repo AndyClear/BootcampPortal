@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: bootcamp
 spec:
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -13,5 +13,18 @@ spec:
       - name: bootcamp
         image: capgeminidevopsbootcamp/bootcamp-app
         ports:
-        - containerPort: 8484
+        - containerPort: 80
         imagePullPolicy: Always
+
+kind: Service
+metadata:
+  name: bootcamp-service
+spec:
+  type: "NodePort"
+  selector:
+    app: bootcamp
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+      nodePort: 31000
