@@ -44,7 +44,6 @@ class App extends Component {
             onRequestChange={(open) => this.setState({open})} >
             <AppBar title="Menu" showMenuIconButton={false} onClick={this.handleToggle} />
             <MenuItem containerElement={<Link to="/dashboard"/>} leftIcon={<ActionHome />}>Dashboard</MenuItem>
-            <MenuItem containerElement={<Link to="/login"/>} leftIcon={<ActionFace />} > Login</MenuItem>
             <MenuItem containerElement={<Link to="/feedback"/>} leftIcon={<ImageEdit />} > Feedback</MenuItem>
             <MenuItem containerElement={<Link to="/locations"/>} leftIcon={<MapsPlace /> }>Locations</MenuItem>
             <MenuItem containerElement={<Link to="/Attendee"/>} leftIcon={<ContentWeekend /> }> Attendees</MenuItem>
