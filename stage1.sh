@@ -12,7 +12,7 @@ terraform plan -var "access_key=$ACCESS_KEY" -var "secret_key=$SECRET_KEY" -var 
 terraform apply -var "access_key=$ACCESS_KEY" -var "secret_key=$SECRET_KEY" -var "github_secret=$GITHUB_SECRET"
 
 # Login to drone, copy token, run stage 2
-# stage 2 - configure ci pipeline
+# stage 2 - configure ci pipelinew
 
 # Stage 3 - build the kube cluster
 # Activate the repository on drone
