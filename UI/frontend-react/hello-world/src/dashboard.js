@@ -7,8 +7,10 @@ import {Timeline} from 'react-twitter-widgets'
 import {connect} from 'react-redux';
 
 const mapStateToProps = (state) => {
+    console.log(state)
     return {
-        data: state.users.data
+        data: state.events.data
+
     }
 }
 
@@ -30,8 +32,8 @@ class Dashboard extends React.Component {
 
  render() {
     const ret = [];
-    const schedule = this.props.data
-    //const schedule = [{time: "09:30", item: "test"}]
+    //const schedule = this.props.data
+    const schedule = [{time: "09:30", item: "test"}]
 
       const actions = [
       <FlatButton
