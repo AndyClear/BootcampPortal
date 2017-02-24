@@ -14,6 +14,6 @@ pipeline:
   deploy:
     image: vallard/drone-kube
     template: kubernetes/deploy.yaml
-    server: https://10.0.0.71:6443
+    server: https://10.0.0.10:6443
     token: ${KUBE_TOKEN}
     ca: ${KUBE_CA}
