@@ -5,8 +5,8 @@ pipeline:
     password: ${DHUB_PASSWORD}
     repo: capgeminidevopsbootcamp/bootcamp-app
     tags: latest
-    dockerfile: UI/frontend-react/hello-world/Dockerfile
     debug: true
+    context: UI/frontend-react/hello-world/
  # deploy:
   #  image: vallard/drone-kube
    # template: kubernetes/deploy.yaml
