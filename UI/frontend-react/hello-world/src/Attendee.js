@@ -14,7 +14,6 @@ const mapStateToProps = (state) => {
     }
 }
 
-
 // const names = ["Chelsea Otakan","Eric Hoffman", "James Anderson"];
 // const avatars = ["http://www.material-ui.com/images/chexee-128.jpg", "http://www.material-ui.com/images/kolage-128.jpg", "http://www.material-ui.com/images/jsa-128.jpg"];
 
@@ -30,7 +29,8 @@ class Attendee extends React.Component {
 
             return (
               <div>
-                <h1>Attendees</h1>
+                <h2>Attendees</h2>
+                <hr />
                   <tbody>
                     {rows}
                   </tbody>

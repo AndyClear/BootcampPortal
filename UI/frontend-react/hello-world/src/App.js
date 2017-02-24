@@ -35,7 +35,6 @@ class App extends Component {
       <div>
        <AppBar title="BootCamp Portal" iconClassNameRight="muidocs-icon-navigation-expand-more"  onClick={this.handleToggle}></AppBar>
         <div className="App">
-          <div className="App-header">
           <div>
           <Drawer
             docked={false}
@@ -43,18 +42,20 @@ class App extends Component {
             open={this.state.open}
             onRequestChange={(open) => this.setState({open})} >
             <AppBar title="Menu" showMenuIconButton={false} onClick={this.handleToggle} />
-            <MenuItem containerElement={<Link to="/dashboard"/>} leftIcon={<ActionHome />}>Dashboard</MenuItem>
+            <MenuItem containerElement={<Link to="/"/>} leftIcon={<ActionHome />}>Dashboard</MenuItem>
             <MenuItem containerElement={<Link to="/feedback"/>} leftIcon={<ImageEdit />} > Feedback</MenuItem>
             <MenuItem containerElement={<Link to="/locations"/>} leftIcon={<MapsPlace /> }>Locations</MenuItem>
             <MenuItem containerElement={<Link to="/Attendee"/>} leftIcon={<ContentWeekend /> }> Attendees</MenuItem>
             <h5 className="Bottom">&copy; DevOps Bootcamp 2017</h5>
           </Drawer>
-
+          </div>
           {this.props.children}
           </div>
+            <div>
+
+            </div>
       </div>
-      </div>
-      </div>
+
 
     );
   }
