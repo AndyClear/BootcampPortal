@@ -6,6 +6,7 @@ pipeline:
     repo: capgeminidevopsbootcamp/bootcamp-app
     tags: latest
     dockerfile: UI/frontend-react/hello-world 
+    debug: true
  # deploy:
   #  image: vallard/drone-kube
    # template: kubernetes/deploy.yaml
