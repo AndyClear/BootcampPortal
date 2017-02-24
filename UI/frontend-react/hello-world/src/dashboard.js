@@ -80,7 +80,7 @@ class Dashboard extends React.Component {
 
     }}
     options={{
-      height: '400', 
+      height: '1000', 
       width: '800'
     }}
     onLoad={() => console.log('Timeline is loaded!')}

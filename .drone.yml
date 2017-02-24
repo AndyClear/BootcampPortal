@@ -1,13 +1,14 @@
 pipeline:
-  buildGO:
-    image: golang
-    commands:
-      - cd /drone/src/github.com/AndyClear/BootcampPortal/test
-      - go build
   buildImage:
     image: plugins/docker
-    username: andyclear
-    password: ${dockerPassword}
-    repo: andyclear/bootcamp
+    username: devopsbootcamp
+    password: ${DHUB_PASSWORD}
+    repo: capgeminidevopsbootcamp/bootcamp-app
     tags: latest
-    dockerfile: test/Dockerfile
+    dockerfile: UI/frontend-react/hello-world 
+ # deploy:
+  #  image: vallard/drone-kube
+   # template: kubernetes/deploy.yaml
+    #server: https://10.0.0.10:6443
+    #token: ${KUBE_TOKEN}
+    #ca: ${KUBE_CA}
