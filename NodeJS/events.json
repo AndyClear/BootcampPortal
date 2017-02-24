@@ -1,0 +1,18 @@
+[
+      {
+        "id": "1",
+        "title":"AWS",
+        "description": "Amazon web services"
+      },
+      {
+        "id": "2",
+        "title":"Terraform",
+        "description": "infrastructure automation tool"
+      },
+      {
+        "id": "3",
+        "title":"Docker",
+        "description": "application containerization"
+      }
+
+]

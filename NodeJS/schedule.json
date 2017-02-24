@@ -1,0 +1,60 @@
+{
+  "1": [
+    {
+      "time":"11:00",
+      "item": "start bootcamp"
+    },
+    {
+      "time":"12:00",
+      "item": "AWS"
+    },
+    {
+      "time":"12:00",
+      "item": "Terraform"
+    },
+    {
+      "time":"12:00",
+      "item": "finaltest"
+    }
+
+  ] ,
+
+  "2": [
+    {
+      "time":"09:30",
+      "item": "Kubernetes"
+    },
+    {
+      "time":"12:00",
+      "item": "Docker"
+    },
+    {
+      "time":"14:00",
+      "item": "Tech challenge brief"
+    },
+    {
+      "time":"15:00",
+      "item": "finaltest"
+    }
+
+  ],
+  "3": [
+    {
+      "time":"09:30",
+      "item": "Hackathon start"
+    },
+    {
+      "time":"12:00",
+      "item": "Hackathon standup"
+    },
+    {
+      "time":"14:00",
+      "item": "Hackathon finish"
+    },
+    {
+      "time":"15:00",
+      "item": "Present results"
+    }
+
+  ]
+}
