@@ -35,6 +35,12 @@ resource "aws_launch_configuration" "ecs_lc" {
     key_name = "${aws_key_pair.ecs-key.key_name}"
     associate_public_ip_address = true
     user_data = "#!/bin/bash\necho ECS_CLUSTER='${var.ecs_cluster_name}' > /etc/ecs/ecs.config"
+
+    root_block_device {
+        volume_type = "standard"
+        volume_size = "120"
+        delete_on_termination = "true"
+    }
 }
 
 
