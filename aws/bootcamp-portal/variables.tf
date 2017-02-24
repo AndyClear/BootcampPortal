@@ -9,3 +9,8 @@ variable "controller_servers" {
 variable "worker_servers" {
   default = 3
 }
+
+variable "peer_owner_id" {
+  description = "AWS Owner ID"
+  default = "481807661051"
+}
